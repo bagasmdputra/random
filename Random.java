@@ -1,3 +1,5 @@
+import java.lang.Math;
+
 public class Random{
 
      public static void main(String []args){
@@ -88,5 +90,13 @@ class Garis{
      */
     public Titik getB() {
         return b;
+    }
+
+    public int length() {
+        int x1 = this.a.getX();
+        int x2 = this.b.getX();
+        int y1 = this.a.getY();
+        int y2 = this.b.getY();
+        return Math.sqrt(Math.pow( (x1 - x2), 2)+Math.pow((y1 - y2), 2));
     }
 }
