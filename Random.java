@@ -5,7 +5,7 @@ public class Random{
      public static void main(String []args){
         Titik titik1 = new Random(). new Titik(1,2);
         Titik titik2 =  new Random(). new Titik(4,5);
-        Garis garis = new Random(). Garis(titik1,titik2);
+        Garis garis = new Random(). new Garis(titik1,titik2);
         
         System.out.println("Panjang garis: " + garis.length());
      }
@@ -49,6 +49,10 @@ public class Random{
          */
         public int getY() {
             return y;
+        }
+        
+        public double distanceTo(Titik xy2) {
+            return Math.sqrt(Math.pow( (this.x - xy2.getX()), 2) + Math.pow((this.y - xy2.getY()), 2));
         }
     }
 
@@ -94,11 +98,7 @@ public class Random{
         }
 
         public double length() {
-            int x1 = this.a.getX();
-            int x2 = this.b.getX();
-            int y1 = this.a.getY();
-            int y2 = this.b.getY();
-            return Math.sqrt(Math.pow( (x1 - x2), 2) + Math.pow((y1 - y2), 2));
+            return this.a.distanceTo(this.b);
         }
     }
 }
