@@ -9,7 +9,12 @@ public class Random{
 
 class Titik{
     private int x,y;
-    
+
+    public Titik(){
+        this.x = 0;
+        this.y = 0;
+    }
+
     public Titik(int x, int y){
         this.x = x;
         this.y = y;
@@ -41,5 +46,47 @@ class Titik{
      */
     public int getY() {
         return y;
+    }
+}
+
+class Garis{
+    private Titik a,b;
+
+    public Garis(){
+        this.a = new Titik();
+        this.b = new Titik();
+    }
+
+    public Garis(Titik a, Titik b){
+        this.a = a;
+        this.b = b;
+    }
+
+    /**
+     * @param a the a to set
+     */
+    public void setA(Titik a) {
+        this.a = a;
+    }
+
+    /**
+     * @param b the b to set
+     */
+    public void setB(Titik b) {
+        this.b = b;
+    }
+
+    /**
+     * @return the a
+     */
+    public Titik getA() {
+        return a;
+    }
+
+    /**
+     * @return the b
+     */
+    public Titik getB() {
+        return b;
     }
 }
