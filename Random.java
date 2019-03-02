@@ -3,7 +3,9 @@ import java.lang.Math;
 public class Random{
 
      public static void main(String []args){
-        Garis garis = new Garis(new Titik(1,2), new Titik(4,5));
+        Titik titik1 = new Random(). new Titik(1,2);
+        Titik titik2 =  new Random(). new Titik(4,5);
+        Garis garis = new Random(). Garis(titik1,titik2);
         
         System.out.println("Panjang garis: " + garis.length());
      }
@@ -91,7 +93,7 @@ public class Random{
             return b;
         }
 
-        public int length() {
+        public double length() {
             int x1 = this.a.getX();
             int x2 = this.b.getX();
             int y1 = this.a.getY();
